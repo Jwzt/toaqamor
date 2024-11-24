@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>natt</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            background-image: url('Design_sem_nome.png'); /* Altere com o caminho da sua imagem */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            overflow: hidden; /* Remove barra de rolagem */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            background-color: rgba(0, 0, 0, 0.6); /* Fundo transparente para leitura do texto */
+            padding: 20px;
+            border-radius: 10px;
+            text-align: justify;
+            color: white;
+            overflow-y: auto;
+            max-height: 80vh; /* Limita a altura do container */
+        }
+
+        .phrase {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* Ajustes para mobile */
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+                padding: 15px;
+            }
+
+            .phrase {
+                font-size: 14px; /* Reduz o tamanho da fonte em telas menores */
+            }
+        }
+
+        /* Animação de corações caindo */
+        .heart {
+            position: absolute;
+            top: -50px;
+            animation: fall 3s infinite;
+            font-size: 30px;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="phrase">
+            Eu quero que você saiba o quanto eu te amo e o quanto você significa para mim. Nos momentos bons e nos difíceis, estarei sempre ao seu lado, te apoiando e te amando. Quando você se sentir pra baixo, lembre-se de que estou aqui. Eu não sei exatamente o que você está sentindo agora, mas o que eu sei com toda a certeza é que estou aqui com você. Seja o que for, estou do seu lado, para te apoiar, te escutar e te dar todo o carinho que você merece. Às vezes, as palavras podem não ser suficientes para mudar o que está acontecendo, mas eu quero que você saiba que nunca vai precisar enfrentar nada sozinha.
+
+            Você é uma pessoa incrível, e eu admiro tanto e tenho tanto orgulho de você e a sua maneira de encarar o mundo, mesmo quando as coisas ficam difíceis. Pode contar comigo para tudo, para os dias bons e os mais desafiadores, para rir ou até para chorar um pouquinho se precisar. O mais importante é que estou aqui, sempre pronto para ouvir o que você tem a dizer ou só ficar em silêncio ao seu lado. Eu sou seu porto seguro, seu apoio quando tudo parecer instável. Não importa o que venha, eu estarei aqui, te sustentando, porque sou seu alicerce pra sempre. 
+
+            Amor, se você quiser ouvir minha voz, nem precisa falar nada, nem se preocupar em explicar ou dizer qualquer coisa. Só me liga, eu vou estar aqui, do outro lado, com todo o carinho do mundo, só para te fazer companhia. Minha princesa, desde o momento em que te conheci, algo dentro de mim mudou para sempre. Nunca imaginei que o amor pudesse ser tão profundo, tão verdadeiro e tão completo até te encontrar. Você me faz sentir a pessoa mais sortuda do mundo.
+
+            Prometo estar ao teu lado em cada momento da sua vida. Vou te apoiar em todos os momentos, nos desafios e nas vitórias, nos dias nublados e ensolarados. Meu coração é teu, completamente, e a cada dia que passa, tenho mais certeza de que foi feito pra te amar. Você é minha princesa, minha musa, minha inspiração. E prometo nunca deixar de te lembrar o quanto você é linda, não só para mim, mas para o mundo inteiro. Cada parte de você é única, especial e me faz te amar mais do que qualquer coisa. 
+
+            Sonho com o dia em que vou te ver segurando nosso bebê, e saber que toda essa história de amor começou com a gente. Te amo mais do que as palavras podem dizer, e mal posso esperar para viver tudo isso contigo. Cada dia com você é um presente, e eu mal posso esperar para viver todas as nossas aventuras juntos. Seja no dia a dia, ou nos pequenos momentos como assistir a um filminho, quero que saiba que sempre estarei aqui, te amando, te valorizando, e me dedicando a fazer de você a pessoa mais feliz do mundo.
+        </div>
+    </div>
+
+    <script>
+        // Função para criar corações caindo
+        function createHeart() {
+            const heart = document.createElement("div");
+            heart.classList.add("heart");
+            heart.innerHTML = "❤️";
+            document.body.appendChild(heart);
+
+            // Definindo posição aleatória para cada coração
+            heart.style.left = Math.random() * 100 + "vw"; // Aleatório de 0 a 100% da largura da tela
+
+            // Remover o coração após a animação
+            setTimeout(() => {
+                heart.remove();
+            }, 3000);
+        }
+
+        // Criar corações continuamente
+        setInterval(createHeart, 500); // Altere o intervalo conforme necessário
+    </script>
+
+</body>
+</html>

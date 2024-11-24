@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>natt</title>
+    <style>
+        body {
+            background-color: #000000;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+            text-align: center;
+        }
+        .container {
+            padding: 40px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 600px;
+            background-color: rgba(0, 0, 0, 0.8); /* Fundo semi-transparente */
+        }
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+        .phrase {
+            margin-bottom: 30px;
+            font-size: 20px;
+            font-weight: 300;
+        }
+        .option {
+            background-color: #444950;
+            border: none;
+            padding: 15px 20px;
+            margin: 10px 0;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            color: white;
+        }
+        .option:hover {
+            background-color: #636e72;
+        }
+        .option:focus {
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2></h2>
+        <div class="phrase">
+            Meus dias juntos com vc ao meu lado princesa:
+        </div>
+        
+        <!-- Botão de Continuar -->
+        <button class="option" onclick="continueToNextPage()">Continuar</button>
+    </div>
+
+    <script>
+        function continueToNextPage() {
+            // Redireciona para a próxima página ou ação
+            window.location.href = "pagina6.html"; // Substitua pela próxima página que você deseja
+        }
+    </script>
+</body>
+</html>
